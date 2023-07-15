@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Card from "react-bootstrap/Card";
 import { Action } from "../Redux/Action";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
@@ -7,6 +6,14 @@ import Form from "react-bootstrap/Form";
 import { useDispatch, useSelector } from "react-redux";
 import "../../App.css";
 import Pagination from "./Pagination";
+import {
+  Card,
+  CardActionArea,
+  CardContent,
+  CardMedia,
+  CircularProgress,
+  Typography,
+} from "@mui/material";
 
 export default function ProductPage() {
   const [page, setPage] = useState(1);
@@ -81,6 +88,7 @@ export default function ProductPage() {
         </Form.Select>
       </div>
       <p style={{ marginTop: "-8px" }} />
+
       <div className="card-grid">
         {data ? (
           data.map((e, id) => {
@@ -89,28 +97,47 @@ export default function ProductPage() {
                 <div>
                   <Card style={{ width: "20rem" }}>
                     <Link to={`/product/${e.id}`}>
-                      <Card.Img variant="top" src={e.image} />
+                      <CardMedia
+                        sx={{ height: 140 }}
+                        image={e.image}
+                        title="img"
+                      />
                     </Link>
-                    <Card.Body>
-                      <Card.Title>{e.title}</Card.Title>
-                      <Card.Subtitle className="mb-2 text-muted">
+                    <CardActionArea>
+                      <CardContent>
+                        <Typography className="mb-2 text-muted">
+                          {e.title}
+                        </Typography>
+                      </CardContent>
+                      <Typography variant="body2" color="text.secondary">
                         {e.brand}
-                      </Card.Subtitle>
-                      <Card.Subtitle>Category:{e.category}</Card.Subtitle>
-                      <Card.Subtitle className="mb-2 text-muted">
-                        <h4>Price:Rs.{e.price}</h4>
-                      </Card.Subtitle>
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary">
+                        Category: {e.category}
+                      </Typography>
+                      <Typography className="mb-2 text-muted">
+                        <h4>Price: Rs.{e.price}</h4>
+                      </Typography>
                       <Link to={`/product/${e.id}`}>
                         <Button variant="info">More Info</Button>
                       </Link>
-                    </Card.Body>
+                    </CardActionArea>
                   </Card>
                 </div>
               </>
             );
           })
         ) : (
-          <h1>....Loading</h1>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              height: "300px",
+            }}
+          >
+            <CircularProgress />
+          </div>
         )}
       </div>
       <Pagination items={{ currPage: page, setPage, total }} />
