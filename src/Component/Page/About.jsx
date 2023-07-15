@@ -7,7 +7,10 @@ export default function About() {
       <Typography variant="h3" component="h1" gutterBottom>
         About Us
       </Typography>
-      <p>This application was developed by me to showcase our React skills.</p>
+      <Typography>
+        This application was developed by Shubham Tribhuvan to showcase the
+        React skills.
+      </Typography>
     </div>
   );
 }
