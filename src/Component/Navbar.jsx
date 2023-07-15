@@ -7,7 +7,7 @@ export default function Navbar() {
       <header className="navbar">
         <div className="navbar__title navbar__item">
           <div className="navflex">
-            <Link to={"/"}>
+            <Link to={"/commerce"}>
               <img
                 style={{ height: "46px" }}
                 src="https://cdn.icon-icons.com/icons2/2387/PNG/512/shopping_cart_market_ecommerce_icon_144576.png"
@@ -24,7 +24,7 @@ export default function Navbar() {
           </div>
 
           <div className="navflex">
-            <Link to={"/"} className="navbar__link">
+            <Link to={"/commerce"} className="navbar__link">
               <h6 className="navbar__item"> TASK-CART</h6>
             </Link>
             <Link to={"/todo"} className="navbar__link">
