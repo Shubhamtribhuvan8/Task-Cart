@@ -10,7 +10,6 @@ import {
   TableRow,
   Paper,
 } from "@mui/material";
-import { Label } from "@mui/icons-material";
 
 const AddTodo = () => {
   const {
@@ -25,7 +24,7 @@ const AddTodo = () => {
 
   return (
     <div>
-      <h2>To-Do LIST</h2>
+      <h2>To-Do</h2>
       <TextField
         type="text"
         value={newTask}
@@ -39,7 +38,6 @@ const AddTodo = () => {
       </Button>
       <br />
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <Label>Task Table</Label>
         <TableContainer component={Paper}>
           <Table>
             <TableHead>
@@ -91,7 +89,7 @@ const AddTodo = () => {
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell>Title</TableCell>
+                <TableCell>Track the Task</TableCell>
                 <TableCell>Count</TableCell>
               </TableRow>
             </TableHead>
