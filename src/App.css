@@ -56,3 +56,8 @@
   top: 1rem !important;
   right: 34rem !important;
 }
+.navflex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

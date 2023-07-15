@@ -80,7 +80,7 @@ export default function ProductPage() {
           <option value="desc">High to Low</option>
         </Form.Select>
       </div>
-      <p style={{ marginTop: "-17px" }} />
+      <p style={{ marginTop: "-8px" }} />
       <div className="card-grid">
         {data ? (
           data.map((e, id) => {
