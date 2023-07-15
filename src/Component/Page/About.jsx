@@ -20,7 +20,7 @@ export default function About() {
           title="blank"
         >
           <strong style={{ color: "blue" }}>Shubham Tribhuvan</strong>
-        </a>
+        </a>{" "}
         to showcase the React skills.
       </Typography>
 
@@ -32,8 +32,8 @@ export default function About() {
         </li>
         <li>
           By using React functional components with hooks, state management with
-          React Context, and making API requests using fetch or axios, you will
-          create a dynamic and interactive application. The to-do list
+          Redux, React Context, and making API requests using fetch or axios,
+          you will create a dynamic and interactive application. The to-do list
           functionality allows users to add new tasks, mark tasks as completed,
           and remove tasks.
         </li>

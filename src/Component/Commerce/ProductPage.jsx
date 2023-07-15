@@ -26,7 +26,6 @@ export default function ProductPage() {
     let data = await res.json();
     setTotal(data.totalPages);
     Action(dispatch, data.data);
-    console.log(data.data);
   }
 
   useEffect(() => {

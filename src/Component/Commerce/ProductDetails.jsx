@@ -26,14 +26,12 @@ export default function ProductDetails() {
       var data = await fetch(url);
       data = await data.json();
       setState(data.data);
-      console.log(data);
     } catch (error) {
       console.log(error);
     }
   };
 
   useEffect(() => {
-    console.log(id);
     getData(
       `https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-products/${id}`
     );
