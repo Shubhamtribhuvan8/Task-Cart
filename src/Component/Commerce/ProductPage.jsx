@@ -59,7 +59,6 @@ export default function ProductPage() {
       );
     }
   }
-  // Mrequest();
   return (
     <div style={{ marginTop: "1%" }}>
       <div style={{ display: "flex", justifyContent: "center", gap: "5px" }}>
@@ -106,7 +105,7 @@ export default function ProductPage() {
                     <CardActionArea>
                       <CardContent>
                         <Typography className="mb-2 text-muted">
-                          {e.title}
+                          <h5>{e.title}</h5>
                         </Typography>
                       </CardContent>
                       <Typography variant="body2" color="text.secondary">
@@ -116,7 +115,7 @@ export default function ProductPage() {
                         Category: {e.category}
                       </Typography>
                       <Typography className="mb-2 text-muted">
-                        <h4>Price: Rs.{e.price}</h4>
+                        <h5>Price: Rs.{e.price}</h5>
                       </Typography>
                       <Link to={`/product/${e.id}`}>
                         <Button variant="info">More Info</Button>
