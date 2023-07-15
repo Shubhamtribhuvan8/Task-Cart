@@ -71,7 +71,7 @@ export default function Contact() {
             margin="normal"
           />
           <Button type="submit" variant="contained" color="primary">
-            Send
+            Submit Details
           </Button>
         </form>
       </div>
